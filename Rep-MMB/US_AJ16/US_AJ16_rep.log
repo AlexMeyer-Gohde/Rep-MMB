@@ -1,0 +1,102 @@
+Starting Dynare (version 5.3).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Substitution of endo leads >= 2: added 6 auxiliary variables and equations.
+Substitution of endo lags >= 2: added 10 auxiliary variables and equations.
+Found 101 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+STEADY-STATE RESULTS:
+
+AI                		 -1.09753
+AIK               		 -1.46609
+AIS               		 -2.2743
+A_eff             		 0.017421
+Ak_over_P         		 -0.536153
+B_t               		 -3.30505
+BoY_t             		 -3.91702
+CASH_t            		 -1.66037
+D_t               		 -1.41609
+Delta_N           		 -2.34393
+FGS               		 -1.04982
+FGS_num           		 -2.16477
+FGS_obs           		 -1.04982
+FGSgap_t          		 0
+GDP_t             		 0.60697
+Ihat              		 -1.11495
+Kbar              		 2.41361
+LIQS_t            		 -0.878955
+N_t               		 2.41361
+QK                		 3.15925e-08
+Q_t_A             		 -0.0316467
+Q_t_B             		 0.0035532
+QtilK_iota_t      		 -0.545015
+QtilS_iota_t      		 -3.0262
+S                 		 7.80277e-09
+SMG               		 4.43347e-08
+SMG_bar           		 3.9324e-08
+SMGm1             		 4.0822e-08
+SMGm2             		 3.85261e-08
+SMGm3             		 3.73917e-08
+Spread_ob_t       		 3.59478
+Spread_t          		 0.00898695
+Spreadgap_t       		 0
+Sprime            		 5.10796e-10
+T_t               		 -1.249
+ToY_t             		 -1.85598
+beta_t            		 0.99372
+chat              		 0.198914
+chi_k             		 -0.545015
+chi_s             		 -4.1563
+chi_spk           		 -0.518356
+chi_w             		 -0.9051
+ctau_q_t          		 -1.32812e-08
+d_FGS_num         		 4.79956e-08
+d_GDP             		 4.3264e-08
+d_GDPm1           		 4.04583e-08
+d_GDPm2           		 3.86245e-08
+d_GDPm3           		 3.77184e-08
+d_Ihat            		 4.79956e-08
+d_chat            		 4.79956e-08
+dlnwhat           		 4.79956e-08
+eta_beta          		 5.77559e-10
+etau_q_t          		 0.0352
+e_p               		 -1.76342e-16
+e_w               		 -1.71532e-15
+g_t               		 0.17
+i_ob_t            		 0.638304
+i_t               		 0.00638304
+invQ_til_As       		 -4.10849
+iota_k            		 -1.47495
+iota_s            		 -2.3112
+iota_t            		 -1.11495
+l                 		 2.19192e-10
+l_ob_t            		 2.1405e-08
+lambda_p_t        		 0.15
+lambda_t          		 -0.166759
+lambda_w_t        		 0.15
+mchat             		 -0.139762
+phi_t             		 -1.85111
+pi_ob_t           		 0.312
+pi_t              		 0.00312
+pi_tm1            		 0.00312
+pi_tm2            		 0.00312
+pi_tm3            		 0.00312
+pistar            		 0.00312
+r                 		 0.00326325
+rK                		 -3.31973
+sdf               		 -0.01442
+sdfr              		 -0.0113002
+sg                		 0.0147
+tau_q_t           		 0.0351999
+what_t            		 0.176856
+ygap_t            		 0
+yhat              		 0.60697
+z_t               		 0.005
+Total computing time : 0h00m01s

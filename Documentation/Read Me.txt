@@ -1,0 +1,8 @@
+--- FOLDER MMB_replication CONTENT: ---
+File/Folder > Content
+replication > Folder with the current state of the directory of replication models. For each model, there is a folder containing all files necessary for running the model in dynare. The respective folder carries the name of the model. Model names are as in the MMB. Not all models in here actually run. More info on that is found in .xlsx files described below.
+	      To add new models, users can just add new folder and update the overview_out.xlsx in Research_routine folder. Importantly, you have to update model_name and model_folder_exists.
+--------Comparision solution methods------
+Main_files > run_files
+
+Inside the run_files.m, please set run_worked_model=1 to rerun the models that work for the comparision exercise (line 39)

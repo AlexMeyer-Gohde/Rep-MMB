@@ -1,0 +1,114 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks = true,
+	linkcolor = blue,
+}
+\usepackage{graphicx}
+\usepackage[bottom]{footmisc} 
+\usepackage{floatrow}
+\usepackage[utf8]{inputenc}
+\usepackage[round]{natbib}
+\usepackage{booktabs}
+\usepackage{array}
+\hypersetup{citecolor=black}
+
+\begin{document}
+	
+	\begin{center}
+		\textbf{{\LARGE User Guide: Macroeconomic Model Data with  \\[1em] Newton Methods Comparison }}
+	\end{center}
+	\bigskip
+	This manual guides users through a comparison exercise with Newton's methods using the models from  the Macroeconomic Model Data Base (MMB hereafter)
+	\medskip
+	
+	\begin{flushleft}
+		\section{Environment Setting}
+	\end{flushleft}
+	\medskip
+	
+	\subsection{Required Software}
+	\medskip
+	
+	\begin{itemize}
+		\item Please install either \textbf{MATLAB} to run the matlab files. For MATLAB, the \textit{Optimization Toolbox} package, the \textit{Statistics Toolbox} package and the R2019a or newer versions are required. 
+		
+		\item Please install \textbf{Dynare} to solve models on the MMB. The current version works with Dynare 5.x or newer version.
+		
+		\item Please go to \url{https://www.dynare.org/resources/quick_start/} for instructions to set up your Dynare in MATLAB or Octave. For Matlab, you can use any Dynare version.
+	\end{itemize}
+	
+	\subsection{Folder Structures}
+	\medskip
+	
+	\begin{itemize}
+		\item The folder contains two main sub folders. The replication contains the mod files and necessary replication files for all model in the MMB. Please note that some models are replicated by the MMB team and have been updated to work with newer version of Dynare and Matlab. Hence, we cannot guarantee identical aspects compared to the version that can be found on author's websites.
+		
+		\item If you just want to work with the replication files of models, you can just use the MMB\textunderscore replication/Replication for your own purpose.
+		
+		\item If you want to conduct a solving method comparison exercise, please go to MMB\textunderscore replication/Main\_files.
+		
+	\end{itemize}
+	
+	
+	\begin{flushleft}
+		\section{The Comparison Exercises}
+	\end{flushleft}
+	\medskip
+	
+	\subsection{Models}
+	\label{sec:Models}
+	\medskip
+	
+	\begin{itemize}
+		\item The MMB categorizes the models into five groups. \textbf{‘Calibrated’} includes models calibrated to match a closed economy. \textbf{‘Estimated US’} and \textbf{‘Estimated Euro Area’} include models estimated on the US and the Euro area data. \textbf{‘Other’} includes models calibrated or estimated on data of multiple countries or countries outside the US or the Euro area, i.e., CA\_BMZ12 is a model estimated on Canadian data; EAUS\_NAWM08 is a two-economy model estimated on data of the Euro area and the US. \textbf{‘Adaptive Learning’} includes models in which agents form expectations through adaptive learning.
+		
+		\item The name of a model starts with the group to which the model belongs, followed by the first letter of the model developers’ last name, and ends with the publication year, e.g., US\_SW07 stands for the model estimated on the US data and developed by \cite{SmetsWouters2007}. For adaptive learning models, “AL” is added at the end of the name, e.g., US\_SW07AL.
+		
+		\item To look for model details, type keywords, e.g., author, paper title, journal name or year, please go to the \hyperbaseurl{macromodelbase.com}
+		
+		
+	\end{itemize}
+	
+	
+	
+	\subsection{Run Comparison Exercise}
+	\begin{itemize}
+		\item For conducting the comparison exercise, you need to change the directory to  MMB\textunderscore replication/Replication
+		\medskip
+		
+		\item \textbf{run\_files.m} will run the comparison exercise. The file will create an execution folder for running. Please note that the folder will be deleted after generating the results.
+		\medskip
+		\item The file will run the comparison exercise through all models in the replication first as the default set-up. Some models will not work with Newton's method exercise.
+		\medskip
+		\item After that, all the reports will be stored in Result\_allmodels.xlsx and First\_Run\_AMG\_JS.m
+		\medskip
+		\item If you want to have the report of only the worked models, you have to go into \textbf{run\_files.m}. At line 39, you have to set run\_worked\_model=1;
+		\medskip
+		\item If you only want it to run over all models, set run\_worked\_model=0;
+	\end{itemize}
+
+	
+\section{Adding new models}
+\medskip
+\begin{itemize}
+	\item To add new models, you need to create the folder in Replication. The name of the folder should follow the MMB rule of naming the model.
+	\medskip
+	\item Inside the model folder, the mod file should follow the short name of the model \_ rep. For example, \cite{SmetsWouters2007} will have the folder name US\_SW07 and the mod file needs to be US\_SW07\_rep.
+	\medskip
+	\item After that, you should copy the MMB\textunderscore replication/Replication folder into MMB\textunderscore replication/Research\_routine to run the comparison exercise
+	\medskip
+	\item The last step require that you must update the file overview\_out.xlsx with the new model name so that the comparison exercise can be executed with a new model.
+\end{itemize}
+	
+
+	\bibliographystyle{elsarticle-harv}
+	\bibliography{DynareModelBase}
+	
+\end{document}
